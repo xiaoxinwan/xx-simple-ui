@@ -1,0 +1,76 @@
+<template>
+    <button class="x-button" :class="{[`icon-${iconPosition}`]: true}" @click="$emit('click')">
+        <x-icon class="icon" v-if="icon && !loading" :name="icon"></x-icon>
+        <x-icon class="loading icon" v-if="loading" :name="loading"></x-icon>
+        <div class="x-button-content">
+            <slot></slot>
+        </div>
+    </button>
+</template>
+
+<script>
+    import XIcon from '../x-icon'
+    export default {
+        name: "x-button",
+        components: {
+            XIcon
+        },
+        props: {
+            icon: {},
+            loading: {
+                type: Boolean,
+                default: false
+            },
+            iconPosition: {
+                type: String,
+                default: 'left',
+                validator(value) {
+                    return value === 'left' || value === 'right'
+                }
+            }
+        }
+    }
+</script>
+
+<style lang="scss" scoped>
+@import "../../css/basic.scss";
+    .x-button{
+        font-size: $font-size;
+        height: $button-height;
+        padding: 0 1em;
+        border-radius: $border-radius;
+        border: 1px solid $border-color;
+        background: $button-bg;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        vertical-align: top;
+        &:hover{
+            border-color: $border-color-hover;
+        }
+        &:active{
+            border-color: $button-active-bg;
+        }
+        &:focus{
+            outline: none;
+        }
+        > .x-button-content{
+            order: 2;
+        }
+        > .icon{
+            order: 1;
+            margin-right: 0.1em;
+        }
+        &.icon-right{
+            > .x-button-content{
+                order: 1;
+            }
+            > .icon{
+                order: 2;
+                margin-right: 0;
+                margin-left: 0.1em;
+            }
+        }
+
+    }
+</style>
