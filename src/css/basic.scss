@@ -14,3 +14,10 @@ $input-height: 32px;
 $red: #f1453d;
 $grey: #eee;
 $blue: #4a90e2;
+@keyframes spin {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+@mixin spin {
+  animation: spin 2s infinite linear;
+}

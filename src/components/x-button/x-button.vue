@@ -1,7 +1,7 @@
 <template>
     <button class="x-button" :class="{[`icon-${iconPosition}`]: true}" @click="$emit('click')">
         <x-icon class="icon" v-if="icon && !loading" :name="icon"></x-icon>
-        <x-icon class="loading icon" v-if="loading" :name="loading"></x-icon>
+        <x-icon class="loading icon" v-if="loading" name="loading"></x-icon>
         <div class="x-button-content">
             <slot></slot>
         </div>
@@ -71,6 +71,11 @@
                 margin-left: 0.1em;
             }
         }
-
+        .loading {
+            @include spin;
+        }
+        & + & {
+            margin-left: 4px;
+        }
     }
 </style>
