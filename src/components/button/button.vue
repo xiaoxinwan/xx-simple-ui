@@ -9,11 +9,11 @@
 </template>
 
 <script>
-    import XIcon from '../x-icon'
+    import Icon from '../icon'
     export default {
-        name: "x-button",
+        name: "Xbutton",
         components: {
-            XIcon
+            "x-icon":Icon
         },
         props: {
             icon: {},
