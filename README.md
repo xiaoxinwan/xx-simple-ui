@@ -1,29 +1,34 @@
 # xx-ui
+一个简约的UI框架
 
-## Project setup
-```
-npm install
-```
+### 介绍
+此框架意在学习之用，希望能将它做好。谢谢！
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+简单组件：icon、button、button-group
 
-### Compiles and minifies for production
+### 安装
 ```
-npm run build
+npm install xx-ui
 ```
 
-### Run your tests
+#### 注意
+css，需要先改为border-box
+
+
+### 快速上手
 ```
-npm run test
+import {Button,ButtonGroup,Icon} from 'xx-ui'
+export default {
+    components: {
+        'x-button':Button,
+        'x-button-group':ButtonGroup,
+        'x-icon':Icon
+    }
+}
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
+### 文档
+稍后补上
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
