@@ -1,2 +1,2 @@
-import XButton from './x-button'
-export default XButton
+import Button from './button'
+export default Button

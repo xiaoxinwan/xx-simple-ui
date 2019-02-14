@@ -3,7 +3,7 @@
 </template>
 
 <script>
-    import XButton from '../components/x-button'
+    import XButton from '../components/button'
     export default {
         name: "x-button",
         components: {

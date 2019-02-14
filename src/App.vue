@@ -8,11 +8,11 @@
 </template>
 
 <script>
-import xButton from './components/x-button'
+import Button from './components/button'
 export default {
   name: 'app',
   components: {
-    xButton
+    "x-button":Button
   }
 }
 </script>

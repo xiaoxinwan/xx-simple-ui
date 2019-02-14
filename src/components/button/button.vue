@@ -9,9 +9,9 @@
 </template>
 
 <script>
-    import Icon from '../icon'
+    import Icon from '../icon.vue'
     export default {
-        name: "Xbutton",
+        name: "XButton",
         components: {
             "x-icon":Icon
         },
@@ -28,6 +28,9 @@
                     return value === 'left' || value === 'right'
                 }
             }
+        },
+        methods:{
+
         }
     }
 </script>
