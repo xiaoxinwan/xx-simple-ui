@@ -1,18 +1,51 @@
 <template>
   <div id="app">
-    <x-row>
-      <x-col>1</x-col>
-      <x-col>2</x-col>
-    </x-row>
-    <x-row>
-      <x-col>1</x-col>
-      <x-col>2</x-col>
-      <x-col>3</x-col>
-    </x-row>
-    <x-row>
-      <x-col span="2">1</x-col>
-      <x-col span="22">2</x-col>
-    </x-row>
+    <div style="border: 1px solid black">
+      <x-row gutter="20">
+        <x-col>1</x-col>
+        <x-col>2</x-col>
+      </x-row>
+      <x-row gutter="20">
+        <x-col>1</x-col>
+        <x-col>2</x-col>
+        <x-col>3</x-col>
+      </x-row>
+      <!--<x-row>-->
+        <!--<x-col span="2" offset="2">1</x-col>-->
+        <!--<x-col span="20">2</x-col>-->
+      <!--</x-row>-->
+      <!--<x-row>-->
+        <!--<x-col span="3" offset="2">3</x-col>-->
+        <!--<x-col span="5" offset="4">5</x-col>-->
+        <!--<x-col span="10">10</x-col>-->
+      <!--</x-row>-->
+      <x-row gutter="20">
+        <x-col>1</x-col>
+        <x-col>2</x-col>
+        <x-col>3</x-col>
+        <x-col>4</x-col>
+        <x-col>5</x-col>
+        <x-col>6</x-col>
+        <x-col>7</x-col>
+        <x-col>8</x-col>
+        <x-col>9</x-col>
+        <x-col>10</x-col>
+        <x-col>11</x-col>
+        <x-col>12</x-col>
+        <x-col>13</x-col>
+        <x-col>14</x-col>
+        <x-col>15</x-col>
+        <x-col>16</x-col>
+        <x-col>17</x-col>
+        <x-col>18</x-col>
+        <x-col>19</x-col>
+        <x-col>20</x-col>
+        <x-col>21</x-col>
+        <x-col>22</x-col>
+        <x-col>23</x-col>
+        <x-col>24</x-col>
+      </x-row>
+    </div>
     <!--<x-input value="张三" disabled></x-input>-->
     <!--<x-input value="李四"></x-input>-->
     <!--<x-input value="李新喜" readonly></x-input>-->
