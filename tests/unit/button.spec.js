@@ -1,5 +1,5 @@
-import {expect} from 'chai'
-import {shallowMount,mount} from '@vue/test-utils'
+import {expect,should} from 'chai'
+import {mount} from '@vue/test-utils'
 import Button from '../../src/components/button'
 
 
@@ -28,33 +28,14 @@ describe('Button', () => {
         expect(useElements.length).to.equal(1)
         expect(useElements[0].getAttribute('xlink:href')).to.equal('#i-loading')
     });
-    // it('icon默认的order是1', () => {
-    //     const wrapper = mount(Button,{
-    //         attachToDocument: true,
-    //         propsData: {
-    //             icon: 'setting'
-    //         }
-    //     })
-    //     const vm = wrapper.vm
-    //     const icon = vm.$el.querySelector('.x-icon')
-    //     expect(wrapper.contains('.icon')).to.exist
-    //     expect(wrapper.contains('use')).to.exist
-    //     console.dir(icon.attributes);
-    //     console.log(window.getComputedStyle(icon));
-    //
-    //     expect(window.getComputedStyle(icon).order).to.eq('1')
-    // });
-    it('设置 iconPosition 可以改变 order', () => {
+    it('点击button触发click事件 ', () => {
         const wrapper = mount(Button, {
             attachToDocument: true,
             propsData: {
-                icon: 'setting',
-                iconPosition: 'right'
+                icon: 'setting'
             }
         })
-        const vm = wrapper.vm
-        const icon = vm.$el.querySelector('svg')
-        console.log(getComputedStyle(icon));
-        expect(getComputedStyle(icon, null).getPropertyValue('margin-right')).to.eq('2')
+        wrapper.trigger('click')
+        expect(wrapper.emitted().click).to.be.ok
     })
 })
