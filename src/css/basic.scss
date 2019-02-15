@@ -14,6 +14,7 @@ $input-height: 32px;
 $red: #f1453d;
 $grey: #eee;
 $blue: #4a90e2;
+$box-shadow-color: rgba(0,0,0,.5);
 @keyframes spin {
   0% {transform: rotate(0deg);}
   100% {transform: rotate(360deg);}
