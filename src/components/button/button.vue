@@ -9,7 +9,7 @@
 </template>
 
 <script>
-    import Icon from '../icon.vue'
+    import Icon from '../icon'
     export default {
         name: "XButton",
         components: {
