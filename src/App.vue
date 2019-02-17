@@ -25,7 +25,7 @@
         },
         methods: {
             handleClick() {
-                this.$toast('你好我不找你了', {closeButton: {text: '你好'}, position: 'top'})
+                this.$toast('你好我不找你了', {closeButton: {text: '你好'}, position: 'bottom'})
             }
         }
     }
