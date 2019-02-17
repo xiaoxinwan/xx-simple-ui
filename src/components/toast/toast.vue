@@ -65,6 +65,7 @@
         methods: {
             closeToast() {
                 this.$el.remove()
+                this.$emit('close')
                 this.$destroy
             },
             handleClickClose() {
