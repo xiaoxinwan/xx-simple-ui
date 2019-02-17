@@ -1,39 +1,6 @@
 <template>
     <div id="app">
-        <!-- 侧+上中下布局 -->
-        <x-layout style="height: 100vh;">
-            <x-sider class="demo demo-sider">sider</x-sider>
-            <x-layout>
-                <x-header class="demo demo-header">header</x-header>
-                <x-content class="demo demo-content">content</x-content>
-                <x-footer class="demo demo-footer">footer</x-footer>
-            </x-layout>
-        </x-layout>
-        <!--上（中+侧）下布局-->
-        <!--<x-layout>-->
-            <!--<x-header class="demo demo-header">header</x-header>-->
-            <!--<x-layout direction="row">-->
-                <!--<x-content class="demo demo-content">content</x-content>-->
-                <!--<x-sider class="demo demo-sider">sider</x-sider>-->
-            <!--</x-layout>-->
-            <!--<x-footer class="demo demo-footer">footer</x-footer>-->
-        <!--</x-layout>-->
-        <!--上（侧+中）下布局-->
-        <!--<x-layout>-->
-            <!--<x-header class="demo demo-header">header</x-header>-->
-            <!--<x-layout direction="row">-->
-                <!--<x-sider class="demo demo-sider">sider</x-sider>-->
-                <!--<x-content class="demo demo-content">content</x-content>-->
-            <!--</x-layout>-->
-            <!--<x-footer class="demo demo-footer">footer</x-footer>-->
-        <!--</x-layout>-->
-        <!--上中下布局-->
-        <!--<x-layout style="height: 100vh;">-->
-            <!--<x-header class="demo demo-header">header</x-header>-->
-            <!--<x-content class="demo demo-content">content</x-content>-->
-            <!--<x-footer class="demo demo-footer">footer</x-footer>-->
-        <!--</x-layout>-->
-
+        <button @click="handleClick">点我</button>
     </div>
 </template>
 
@@ -53,6 +20,11 @@
             'x-content': Layout.Content,
             'x-sider': Layout.Sider,
             'x-footer': Layout.Footer
+        },
+        methods: {
+            handleClick() {
+                this.$toast('这是一消息')
+            }
         }
     }
 </script>
