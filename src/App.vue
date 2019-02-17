@@ -21,29 +21,36 @@
             'x-sider': Layout.Sider,
             'x-footer': Layout.Footer
         },
+        created() {
+            this.$toast('你好我不找你了你好我不找你了你好我不找你了你好我不找你了你好我不找你了你好我不找你了你好我不找你了你好我不找你了你好我不找你了你好我不找你了你好我不找你了', {closeButton: {text: '你好'}})
+        },
         methods: {
             handleClick() {
-                this.$toast('这是一消息')
+                this.$toast('你好我不找你了', {closeButton: {text: '你好'}})
             }
         }
     }
 </script>
 
 <style lang="scss">
-    .demo{
+    .demo {
         min-height: 100px;
         text-align: center;
-        &.demo-header{
+
+        &.demo-header {
             background: #CCD3E0;
         }
-        &.demo-content{
+
+        &.demo-content {
             background: #646D78;
         }
-        &.demo-sider{
+
+        &.demo-sider {
             background: #26272E;
             color: #ffffff;
         }
-        &.demo-footer{
+
+        &.demo-footer {
             background: #ABB4BF;
         }
     }
