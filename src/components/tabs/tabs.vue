@@ -45,6 +45,6 @@
 
 <style lang="scss" scoped>/**/
 .tabs {
-    border: 1px solid #dcdee2;
+
 }
 </style>

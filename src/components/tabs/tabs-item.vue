@@ -38,7 +38,7 @@
 
         methods: {
             xxx() {
-                this.eventBus.$emit('update:selected', this.name)
+                this.eventBus.$emit('update:selected', this.name, this)
             }
         }
     }
@@ -52,8 +52,11 @@
         height: 100%;
         display: flex;
         align-items: center;
+        color: #333;
+        font-size: 14px;
+        font-family: PingFangSC-Regular, Arial, "Helvetica Neue", Helvetica, sans-serif;
         &.active{
-            background: red;
+            color: #4A90E2;
         }
     }
 </style>
