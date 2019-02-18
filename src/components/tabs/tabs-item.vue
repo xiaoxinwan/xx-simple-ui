@@ -1,5 +1,5 @@
 <template>
-    <div class="tabs-item" @click="xxx" :class="classes">
+    <div class="tabs-item" @click="handleClick" :class="classes">
         <slot></slot>
     </div>
 </template>
@@ -26,7 +26,8 @@
         computed: {
             classes() {
                 return {
-                    active: this.active
+                    active: this.active,
+                    disabled: this.disabled
                 }
             }
         },
@@ -37,7 +38,8 @@
         },
 
         methods: {
-            xxx() {
+            handleClick() {
+                if(this.disabled) {return}
                 this.eventBus.$emit('update:selected', this.name, this)
             }
         }
@@ -55,8 +57,18 @@
         color: #333;
         font-size: 14px;
         font-family: PingFangSC-Regular, Arial, "Helvetica Neue", Helvetica, sans-serif;
+        > .x-icon{
+            margin-right: 1em;
+        }
         &.active{
             color: #4A90E2;
+            > .x-icon{
+                fill: #4A90E2;
+            }
+        }
+        &.disabled{
+            color: grey;
+            cursor: not-allowed;
         }
     }
 </style>
