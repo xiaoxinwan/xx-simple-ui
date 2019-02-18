@@ -6,6 +6,7 @@
 
 <script>
     import Vue from 'vue'
+
     export default {
         name: "tabs",
         props: {
@@ -16,7 +17,7 @@
             direction: {
                 type: String,
                 default: 'horizontal',
-                validator(value){
+                validator(value) {
                     return ['horizontal', 'vertical'].indexOf(value) >= 0
                 }
             }
@@ -28,15 +29,22 @@
             return {eventBus: this.eventBus}
         },
         mounted() {
-            this.eventBus.$emit('update:selected', this.selected)
+            // 需要知道点击的是什么item,
+            this.$children.forEach((vm) => {
+                if (vm.$options.name === 'tabs-head') {
+                    vm.$children.forEach((childVm) => {
+                        if (childVm.$options.name === 'tabs-item' && childVm.name === this.selected) {
+                            this.eventBus.$emit('update:selected', this.selected, childVm)
+                        }
+                    })
+                }
+            })
         }
-
-
     }
 </script>
 
 <style lang="scss" scoped>/**/
-    .tabs{
-        border: 1px solid red;
-    }
+.tabs {
+    border: 1px solid #dcdee2;
+}
 </style>
