@@ -21,7 +21,6 @@
         display: flex;
         height: 40px;
         justify-content: flex-start;
-        align-items: center;
         > .actions-wrapper{
             margin-left: auto;
         }
