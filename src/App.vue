@@ -1,22 +1,11 @@
 <template>
-    <div id="app">
-        <x-tabs :selected.sync="selectedTab">
-            <x-tabs-head>
-                <template slot="actions">
-                    <x-button>设置</x-button>
-                </template>
-                <x-tabs-item name="name1">标签一</x-tabs-item>
-                <x-tabs-item name="name2" disabled>标签二</x-tabs-item>
-                <x-tabs-item name="name3">
-                    <x-icon name="download"></x-icon> 标签三
-                </x-tabs-item>
-            </x-tabs-head>
-            <x-tabs-body>
-                <x-tabs-pane name="name1">标签一的相关内容</x-tabs-pane>
-                <x-tabs-pane name="name2">标签二的相关内容</x-tabs-pane>
-                <x-tabs-pane name="name3">标签三的相关内容</x-tabs-pane>
-            </x-tabs-body>
-        </x-tabs>
+    <div id="app" style="padding: 100px;">
+        <x-popover>
+            <div slot="content">
+                关闭关闭关闭
+            </div>
+            <x-button>点我点我</x-button>
+        </x-popover>
     </div>
 </template>
 
@@ -29,6 +18,7 @@
     import Icon from './components/icon'
     import Layout from './components/layout'
     import Tabs from './components/tabs'
+    import Popover from './components/popover'
 
     export default {
         name: 'app',
@@ -44,7 +34,8 @@
             'x-tabs-head': Tabs.TabsHead,
             'x-tabs-item': Tabs.TabsItem,
             'x-tabs-body': Tabs.TabsBody,
-            'x-tabs-pane': Tabs.TabsPane
+            'x-tabs-pane': Tabs.TabsPane,
+            'x-popover': Popover
         },
         data() {
             return{
