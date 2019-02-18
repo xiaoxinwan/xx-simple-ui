@@ -1,7 +1,9 @@
 <template>
     <div class="tabs-head">
         <slot></slot>
-        <slot name="actions"></slot>
+        <div class="actions-wrapper">
+            <slot name="actions"></slot>
+        </div>
     </div>
 </template>
 
@@ -14,8 +16,14 @@
     }
 </script>
 
-<style scoped>
-    .tabs-head{
-
+<style lang="scss" scoped>
+    .tabs-head {
+        display: flex;
+        height: 40px;
+        justify-content: flex-start;
+        align-items: center;
+        > .actions-wrapper{
+            margin-left: auto;
+        }
     }
 </style>

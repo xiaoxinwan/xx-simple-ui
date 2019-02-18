@@ -27,8 +27,8 @@
         provide() {
             return {eventBus: this.eventBus}
         },
-        methods: {
-
+        mounted() {
+            this.eventBus.$emit('update:selected', this.selected)
         }
 
 
@@ -37,6 +37,6 @@
 
 <style lang="scss" scoped>/**/
     .tabs{
-
+        border: 1px solid red;
     }
 </style>

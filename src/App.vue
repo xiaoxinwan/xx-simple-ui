@@ -48,7 +48,7 @@
         },
         data() {
             return{
-                selectedTab: 'name1'
+                selectedTab: 'name2'
             }
         },
         created() {
