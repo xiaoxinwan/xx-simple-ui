@@ -75,7 +75,6 @@
                 }
                 contentWrapper.style.left = contentPositions[this.position].left + 'px'
                 contentWrapper.style.top = contentPositions[this.position].top + 'px'
-
             },
             eventHandler(e) {
                 if (this.$refs.popover && (this.$refs.popover === e.target || this.$refs.popover.contains(e.target))) {
