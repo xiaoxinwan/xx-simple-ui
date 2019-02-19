@@ -1,29 +1,57 @@
 <template>
     <div id="app" style="padding: 400px;">
-        <x-popover position="left">
-            <div slot="content" >
-                左左左左左左左左左左左左左左左左左左左左左左左左左左左
-            </div>
-            <x-button>左</x-button>
-        </x-popover>
-        <x-popover position="top">
-            <div slot="content" >
-                上上山上上山上上山上上山上上山上上山上上山上上山上上山
-            </div>
-            <x-button>上</x-button>
-        </x-popover>
-        <x-popover position="bottom">
-            <div slot="content" >
-                下下下下下下下下下下下下下下下下下下下下下下下下
-            </div>
-            <x-button>下</x-button>
-        </x-popover>
-        <x-popover position="right">
-            <div slot="content" >
-                又又又又又又又又又又又又又又又又又又又又又又又又又又又
-            </div>
-            <x-button>右</x-button>
-        </x-popover>
+        <div>
+            <x-popover position="left">
+                <div slot="content" >
+                    左左左左左左左左左左左左左左左左左左左左左左左左左左左
+                </div>
+                <x-button>左</x-button>
+            </x-popover>
+            <x-popover position="top">
+                <div slot="content" >
+                    上上山上上山上上山上上山上上山上上山上上山上上山上上山
+                </div>
+                <x-button>上</x-button>
+            </x-popover>
+            <x-popover position="bottom">
+                <div slot="content" >
+                    下下下下下下下下下下下下下下下下下下下下下下下下
+                </div>
+                <x-button>下</x-button>
+            </x-popover>
+            <x-popover position="right">
+                <div slot="content" >
+                    又又又又又又又又又又又又又又又又又又又又又又又又又又又
+                </div>
+                <x-button>右</x-button>
+            </x-popover>
+        </div>
+        <div style="padding-top: 100px">
+            <x-popover position="left" trigger="hover">
+                <div slot="content" >
+                    左左左左左左左左左左左左左左左左左左左左左左左左左左左
+                </div>
+                <x-button>左</x-button>
+            </x-popover>
+            <x-popover position="top" trigger="hover">
+                <div slot="content" >
+                    上上山上上山上上山上上山上上山上上山上上山上上山上上山
+                </div>
+                <x-button>上</x-button>
+            </x-popover>
+            <x-popover position="bottom" trigger="hover">
+                <div slot="content" >
+                    下下下下下下下下下下下下下下下下下下下下下下下下
+                </div>
+                <x-button>下</x-button>
+            </x-popover>
+            <x-popover position="right" trigger="hover">
+                <div slot="content" >
+                    又又又又又又又又又又又又又又又又又又又又又又又又又又又
+                </div>
+                <x-button>右</x-button>
+            </x-popover>
+        </div>
     </div>
 </template>
 
