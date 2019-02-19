@@ -1,10 +1,28 @@
 <template>
-    <div id="app" style="padding: 100px;">
-        <x-popover>
-            <div slot="content">
-                关闭关闭关闭
+    <div id="app" style="padding: 400px;">
+        <x-popover position="left">
+            <div slot="content" >
+                左左左左左左左左左左左左左左左左左左左左左左左左左左左
             </div>
-            <x-button>点我点我</x-button>
+            <x-button>左</x-button>
+        </x-popover>
+        <x-popover position="top">
+            <div slot="content" >
+                上上山上上山上上山上上山上上山上上山上上山上上山上上山
+            </div>
+            <x-button>上</x-button>
+        </x-popover>
+        <x-popover position="bottom">
+            <div slot="content" >
+                下下下下下下下下下下下下下下下下下下下下下下下下
+            </div>
+            <x-button>下</x-button>
+        </x-popover>
+        <x-popover position="right">
+            <div slot="content" >
+                又又又又又又又又又又又又又又又又又又又又又又又又又又又
+            </div>
+            <x-button>右</x-button>
         </x-popover>
     </div>
 </template>
