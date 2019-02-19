@@ -37,22 +37,34 @@
             }
         },
         mounted() {
-            if (this.trigger === 'click') {
-                this.$refs.popover.addEventListener('click', this.handleClick)
-            }else {
-                this.$refs.popover.addEventListener('mouseenter', this.handleOpen)
-                this.$refs.popover.addEventListener('mouseleave', this.handleClose)
-            }
+            this.addPopoverListeners()
         },
         beforeDestroy(){
-            if (this.trigger === 'click') {
-                this.$refs.popover.removeEventListener('click', this.handleClick)
-            }else {
-                this.$refs.popover.removeEventListener('mouseenter', this.handleOpen)
-                this.$refs.popover.removeEventListener('mouseleave', this.handleClose)
-            }
+
         },
         methods: {
+            addPopoverListeners() {
+                if (this.trigger === 'click') {
+                    this.$refs.popover.addEventListener('click', this.handleClick)
+                }else {
+                    this.$refs.popover.addEventListener('mouseenter', this.handleOpen)
+                    this.$refs.popover.addEventListener('mouseleave', this.handleClose)
+
+                }
+            },
+            removePopoverListeners() {
+                if (this.trigger === 'click') {
+                    this.$refs.popover.removeEventListener('click', this.handleClick)
+                }else {
+                    this.$refs.popover.removeEventListener('mouseenter', this.handleOpen)
+                    this.$refs.popover.removeEventListener('mouseleave', this.handleClose)
+                }
+            },
+            putBackContent() {
+              const {contentWrapper, popover} = this.$refs
+              if(!contentWrapper){return}
+              popover.appendChild(contentWrapper)
+            },
             handleClick(event) {
                 if (this.$refs.triggerWrapper.contains(event.target)) {
                     if (this.visible === true) {
