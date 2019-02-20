@@ -1,10 +1,10 @@
 {
-  "name": "xx-ui",
+  "name": "xx-simple-ui",
   "version": "0.1.0",
-  "main": "dist/xx-ui.umd.min.js",
+  "main": "dist/xx-simple-ui.umd.min.js",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --name xx-ui src/index.js",
+    "build": "vue-cli-service build --target lib --name xx-simple-ui src/index.js",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit"
   },
