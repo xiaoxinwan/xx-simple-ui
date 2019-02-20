@@ -1,57 +1,16 @@
 <template>
-    <div id="app" style="padding: 400px;">
-        <div>
-            <x-popover position="left">
-                <div slot="content" >
-                    左左左左左左左左左左左左左左左左左左左左左左左左左左左
-                </div>
-                <x-button>左</x-button>
-            </x-popover>
-            <x-popover position="top">
-                <div slot="content" >
-                    上上山上上山上上山上上山上上山上上山上上山上上山上上山
-                </div>
-                <x-button>上</x-button>
-            </x-popover>
-            <x-popover position="bottom">
-                <div slot="content" >
-                    下下下下下下下下下下下下下下下下下下下下下下下下
-                </div>
-                <x-button>下</x-button>
-            </x-popover>
-            <x-popover position="right">
-                <div slot="content" >
-                    又又又又又又又又又又又又又又又又又又又又又又又又又又又
-                </div>
-                <x-button>右</x-button>
-            </x-popover>
-        </div>
-        <div style="padding-top: 100px">
-            <x-popover position="left" trigger="hover">
-                <div slot="content" >
-                    左左左左左左左左左左左左左左左左左左左左左左左左左左左
-                </div>
-                <x-button>左</x-button>
-            </x-popover>
-            <x-popover position="top" trigger="hover">
-                <div slot="content" >
-                    上上山上上山上上山上上山上上山上上山上上山上上山上上山
-                </div>
-                <x-button>上</x-button>
-            </x-popover>
-            <x-popover position="bottom" trigger="hover">
-                <div slot="content" >
-                    下下下下下下下下下下下下下下下下下下下下下下下下
-                </div>
-                <x-button>下</x-button>
-            </x-popover>
-            <x-popover position="right" trigger="hover">
-                <div slot="content" >
-                    又又又又又又又又又又又又又又又又又又又又又又又又又又又
-                </div>
-                <x-button>右</x-button>
-            </x-popover>
-        </div>
+    <div id="app" style="padding: 200px;">
+        <x-collapse>
+            <x-collapse-item title="史蒂夫·乔布斯">
+                文本1文本1
+            </x-collapse-item>
+            <x-collapse-item title="斯蒂夫·盖瑞·沃兹尼亚克">
+                文本2文本2
+            </x-collapse-item>
+            <x-collapse-item title="乔纳森·伊夫">
+                文本3文本3
+            </x-collapse-item>
+        </x-collapse>
     </div>
 </template>
 
@@ -65,6 +24,7 @@
     import Layout from './components/layout'
     import Tabs from './components/tabs'
     import Popover from './components/popover'
+    import Collapse from './components/collapse'
 
     export default {
         name: 'app',
@@ -81,7 +41,9 @@
             'x-tabs-item': Tabs.TabsItem,
             'x-tabs-body': Tabs.TabsBody,
             'x-tabs-pane': Tabs.TabsPane,
-            'x-popover': Popover
+            'x-popover': Popover,
+            'x-collapse': Collapse,
+            'x-collapse-item': Collapse.CollapseItem
         },
         data() {
             return{
