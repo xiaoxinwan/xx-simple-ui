@@ -1,6 +1,6 @@
 <template>
     <div id="app" style="padding: 200px;">
-        <x-collapse>
+        <x-collapse single>
             <x-collapse-item title="史蒂夫·乔布斯">
                 文本1文本1
             </x-collapse-item>

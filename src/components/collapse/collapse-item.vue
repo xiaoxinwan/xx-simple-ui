@@ -30,10 +30,27 @@
                 open: false
             }
         },
+        inject: ['eventBus'],
+        mounted() {
+            this.eventBus && this.eventBus.$on('update:selected', (vm) => {
+                if(vm !== this) {
+                    this.handleClose()
+                }
+            })
+        },
         methods: {
             handleClick() {
-                this.open = !this.open
-                this.$refs.icon.$el.style.transform = this.open ? 'rotate(90deg)' : 'rotate(360deg)';
+                if(this.open) {
+                    this.handleClose()
+                }else{
+                    this.open = true
+                    this.$refs.icon.$el.style.transform = 'rotate(90deg)'
+                    this.eventBus && this.eventBus.$emit('update:selected', this)
+                }
+            },
+            handleClose() {
+                this.open = false
+                this.$refs.icon.$el.style.transform = 'rotate(360deg)'
             }
         }
     }
