@@ -1,4 +1,3 @@
-import Vue from 'vue'
 import XButton from './components/button/button'
 import XButtonGroup from './components/button/button-group'
 import XCollapse from './components/collapse/collapse'
@@ -21,7 +20,7 @@ import XTabsPane from './components/tabs/tabs-pane'
 import XToast from './components/toast'
 import Plugin from './components/toast/toastPlugin'
 
-const Components = {
+const Components = [
     XButton,
     XButtonGroup,
     XCollapse,
@@ -40,17 +39,18 @@ const Components = {
     XTabsBody,
     XTabsHead,
     XTabsItem,
-    XTabsPane,
-    XToast,
-    Plugin
+    XTabsPane
+]
+const install = Vue => {
+    components.forEach(component => {
+        component.install(Vue)
+    })
+    Vue.use(XToast)
+    Vue.use(Plugin)
 }
 
-Object.keys(Components).forEach(name => {
-    Vue.component(name, Components[name])
-})
 
-export default Components
-
-
+export { XToast, Plugin }
+export default { install, XToast, Plugin }
 
 
