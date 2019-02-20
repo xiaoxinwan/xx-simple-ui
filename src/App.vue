@@ -1,16 +1,17 @@
 <template>
     <div id="app" style="padding: 200px;">
-        <x-collapse single>
-            <x-collapse-item title="史蒂夫·乔布斯">
+        <x-collapse :selected.sync="selectedTab">
+            <x-collapse-item title="史蒂夫·乔布斯" name="1">
                 文本1文本1
             </x-collapse-item>
-            <x-collapse-item title="斯蒂夫·盖瑞·沃兹尼亚克">
+            <x-collapse-item title="斯蒂夫·盖瑞·沃兹尼亚克" name="2">
                 文本2文本2
             </x-collapse-item>
-            <x-collapse-item title="乔纳森·伊夫">
+            <x-collapse-item title="乔纳森·伊夫" name="3">
                 文本3文本3
             </x-collapse-item>
         </x-collapse>
+        被选中的选项：{{ selectedTab }}
     </div>
 </template>
 
@@ -47,7 +48,7 @@
         },
         data() {
             return{
-                selectedTab: 'name1'
+                selectedTab: '1'
             }
         },
         created() {

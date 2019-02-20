@@ -2,7 +2,7 @@
     <div class="collapse-item">
         <div class="title" @click="handleClick">
             <x-icon name="right" ref="icon" v-if="!hideIcon"></x-icon>
-            {{title}}
+            {{title}} {{single}}
         </div>
         <div class="content" v-if="open">
             <slot></slot>
@@ -23,18 +23,25 @@
             hideIcon: {
                 type: Boolean,
                 default: false
+            },
+            name: {
+                type: String,
+                required: true
             }
         },
         data() {
             return {
-                open: false
+                open: false,
+                single: false
             }
         },
         inject: ['eventBus'],
         mounted() {
-            this.eventBus && this.eventBus.$on('update:selected', (vm) => {
-                if(vm !== this) {
+            this.eventBus && this.eventBus.$on('update:selected', (name) => {
+                if(name !== this.name) {
                     this.handleClose()
+                }else{
+                    this.handleOpen()
                 }
             })
         },
@@ -43,14 +50,16 @@
                 if(this.open) {
                     this.handleClose()
                 }else{
-                    this.open = true
                     this.$refs.icon.$el.style.transform = 'rotate(90deg)'
-                    this.eventBus && this.eventBus.$emit('update:selected', this)
+                    this.eventBus && this.eventBus.$emit('update:selected', this.name)
                 }
             },
             handleClose() {
                 this.open = false
                 this.$refs.icon.$el.style.transform = 'rotate(360deg)'
+            },
+            handleOpen() {
+                this.open = true
             }
         }
     }
