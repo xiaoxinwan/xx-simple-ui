@@ -37,26 +37,26 @@
         },
         inject: ['eventBus'],
         mounted() {
-            this.eventBus && this.eventBus.$on('update:selected', (name) => {
-                if(name !== this.name) {
-                    this.handleClose()
+            this.eventBus && this.eventBus.$on('update:selected', (names) => {
+                if(names.indexOf(this.name)>=0) {
+                    this.open = true
+                    this.$refs.icon.$el.style.transform = 'rotate(90deg)'
                 }else{
-                    this.handleOpen()
+                    this.open = false
+                    this.$refs.icon.$el.style.transform = 'rotate(360deg)'
                 }
             })
         },
         methods: {
             handleClick() {
                 if(this.open) {
-                    this.handleClose()
+                    this.eventBus && this.eventBus.$emit('update:removeSelected', this.name)
                 }else{
-                    this.$refs.icon.$el.style.transform = 'rotate(90deg)'
-                    this.eventBus && this.eventBus.$emit('update:selected', this.name)
+                    this.eventBus && this.eventBus.$emit('update:addSelected', this.name)
                 }
             },
             handleClose() {
                 this.open = false
-                this.$refs.icon.$el.style.transform = 'rotate(360deg)'
             },
             handleOpen() {
                 this.open = true

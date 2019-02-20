@@ -1,6 +1,6 @@
 <template>
     <div id="app" style="padding: 200px;">
-        <x-collapse :selected.sync="selectedTab">
+        <x-collapse :selected.sync="selectedTab" single>
             <x-collapse-item title="史蒂夫·乔布斯" name="1">
                 文本1文本1
             </x-collapse-item>
@@ -48,7 +48,7 @@
         },
         data() {
             return{
-                selectedTab: '1'
+                selectedTab: ['1','3']
             }
         },
         created() {
