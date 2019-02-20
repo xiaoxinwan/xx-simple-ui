@@ -20,7 +20,7 @@ import XTabsPane from './components/tabs/tabs-pane'
 import XToast from './components/toast'
 import Plugin from './components/toast/toastPlugin'
 
-const Components = [
+const components = [
     XButton,
     XButtonGroup,
     XCollapse,
