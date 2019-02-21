@@ -49,7 +49,7 @@
             if (this.autoClose) {
                 setTimeout(() => {
                     this.closeToast()
-                }, this.autoCloseDelay * 1000)
+                }, this.autoClose * 1000)
             }
             this.$nextTick(() => {
                 this.$refs.line.style.height =
@@ -66,7 +66,7 @@
         methods: {
             closeToast() {
                 this.$el.remove()
-                this.$emit('closeToast')
+                this.$emit('close')
                 this.$destroy
             },
             handleClickClose() {

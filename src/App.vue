@@ -1,17 +1,6 @@
 <template>
-    <div id="app" style="padding: 200px;">
-        <x-collapse :selected.sync="selectedTab" single>
-            <x-collapse-item title="史蒂夫·乔布斯" name="1">
-                文本1文本1
-            </x-collapse-item>
-            <x-collapse-item title="斯蒂夫·盖瑞·沃兹尼亚克" name="2">
-                文本2文本2
-            </x-collapse-item>
-            <x-collapse-item title="乔纳森·伊夫" name="3">
-                文本3文本3
-            </x-collapse-item>
-        </x-collapse>
-        被选中的选项：{{ selectedTab }}
+    <div id="app">
+        <x-button @click="handleClick">你好</x-button>
     </div>
 </template>
 
@@ -26,6 +15,7 @@
     import Tabs from './components/tabs'
     import Popover from './components/popover'
     import Collapse from './components/collapse'
+
 
     export default {
         name: 'app',
@@ -52,10 +42,11 @@
             }
         },
         created() {
+            console.log(this);
         },
         methods: {
             handleClick() {
-                this.$toast('你好我不找你了', {closeButton: {text: '你好'}, position: 'bottom'})
+                this.$toast('你好我不找你了', {closeButton: {text: '你好'}, position: 'top'})
             }
         }
     }
