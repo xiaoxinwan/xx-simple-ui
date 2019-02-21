@@ -2,22 +2,31 @@
 一个简约的UI框架
 
 ### 介绍
-此框架意在学习之用，希望能将它做好。谢谢！
 
-简单组件：icon、button、button-group
+简单组件：icon、button、button-group、collapse、grid、input、layout、popover、tabs、toast
 
 ### 安装
 ```
-npm install xx-ui
+$ npm install xx-simple-ui
 ```
 
 #### 注意
 css，需要先改为border-box
-
+```
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+```
 
 ### 快速上手
+在`main.js`中引入
 ```
-import {Button,ButtonGroup,Icon} from 'xx-ui'
+import 'xx-simple-ui'
+```
+
+在组件中，需要如下分别引入需要的组件
+```
+import {Button,ButtonGroup,Icon} from 'xx-simple-ui'
 export default {
     components: {
         'x-button':Button,
