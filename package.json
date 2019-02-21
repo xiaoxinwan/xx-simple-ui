@@ -1,6 +1,6 @@
 {
   "name": "xx-simple-ui",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "main": "dist/xx-simple-ui.umd.min.js",
   "scripts": {
     "serve": "vue-cli-service serve",
