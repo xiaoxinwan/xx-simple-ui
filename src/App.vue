@@ -1,6 +1,13 @@
 <template>
     <div id="app">
-        <x-button @click="handleClick">你好</x-button>
+        <div style="border: 1px solid black;">
+            <x-row gutter="20">
+                <x-col span="12">
+                    1</x-col>
+                <x-col span="12">1</x-col>
+            </x-row>
+        </div>
+
     </div>
 </template>
 
@@ -22,6 +29,8 @@
         components: {
             'x-button': Button,
             'x-icon': Icon,
+            'x-row': Row,
+            'x-col': Col,
             'x-layout': Layout,
             'x-header': Layout.Header,
             'x-content': Layout.Content,
@@ -53,6 +62,15 @@
 </script>
 
 <style lang="scss">
+    *{
+        box-sizing: border-box;
+    }
+    .row{
+
+    }
+    .col{
+        border: 1px solid red;
+    }
     .demo {
         min-height: 100px;
         text-align: center;
