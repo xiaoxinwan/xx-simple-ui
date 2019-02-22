@@ -1,5 +1,5 @@
 <template>
-    <div class="sider">
+    <div class="x-sider">
         <slot></slot>
     </div>
 </template>
@@ -10,8 +10,3 @@
     }
 </script>
 
-<style lang="scss" scoped>
-    .sider{
-
-    }
-</style>

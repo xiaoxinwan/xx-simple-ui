@@ -1,5 +1,5 @@
 <template>
-    <div class="footer">
+    <div class="x-footer">
         <slot></slot>
     </div>
 </template>
@@ -10,8 +10,3 @@
     }
 </script>
 
-<style lang="scss" scoped>
-    .footer{
-
-    }
-</style>
