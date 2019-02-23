@@ -1,6 +1,6 @@
 <template>
     <div>
-        <x-collapse :selected="['3']" >
+        <x-collapse :selected="['2','3']" >
             <x-collapse-item title="如何跟踪变化" name="1">
                 当你把一个普通的JavaScript对象传给Vue实例的data选项，Vue将遍历对象的所有属性，并使用Object.defineProperty把这些属性全部转为getter/setter。
             </x-collapse-item>
@@ -19,7 +19,7 @@
     import CollapseItem from '../../../src/components/collapse/collapse-item'
 
     export default {
-        name: "collapse-demo",
+        name: "collapse-demo-1",
         components: {
             'x-collapse': Collapse,
             'x-collapse-item': CollapseItem

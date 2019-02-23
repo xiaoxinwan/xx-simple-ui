@@ -5,7 +5,7 @@
 <grid-demo-1></grid-demo-1>
 
 ### 使用
-```
+``` vue
 <x-row>
     <x-col span="24">24</x-col>
 </x-row>
@@ -43,7 +43,7 @@
 <grid-demo-2></grid-demo-2>
 
 ### 使用
-```
+``` vue
 <x-row class="demoRow" gutter="20">
     <x-col span="8">
         <div class="demoCol">gutter为20</div>
@@ -77,7 +77,7 @@
 <grid-demo-3></grid-demo-3>
 
 ### 使用
-```
+``` vue
 <x-row>
     <x-col span="12" offset="1">offset为1</x-col>
     <x-col span="3" offset="2">offset为2</x-col>
@@ -96,7 +96,7 @@
 <br>
 <grid-demo-4></grid-demo-4>
 
-```
+``` vue
 <x-row>
     <x-col span="24"
             :ipad="{span: 8}"

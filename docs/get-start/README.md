@@ -10,7 +10,7 @@ title: 快速上手
 
 ### 引入xx-simple-ui
 在`webpack`入口文件`main.js`，如下配置：
-```
+``` js
 import Vue from 'vue'
 import App from './App.vue'
 
@@ -26,7 +26,7 @@ new Vue({
 直接在文件中引入相应的组件，并注册即可使用，
 
 如：
-```
+``` js
 import {Button} from 'xx-simple-ui'
 
 export default {

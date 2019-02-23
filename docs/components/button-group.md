@@ -7,7 +7,7 @@
 </ClientOnly>
 
 ### 使用
-```
+``` vue
 <x-button-group>
     <x-button icon="left">上一页</x-button>
     <x-button icon="right" icon-position="right">下一页</x-button>

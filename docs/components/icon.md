@@ -5,7 +5,7 @@
 <icon-demo></icon-demo>
 
 ### 使用
-```
+``` vue
 import { Icon } from 'xx-simple-ui'
 export default {
     components: {

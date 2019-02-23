@@ -7,7 +7,7 @@
 <layout-demo-1></layout-demo-1>
 
 ### 使用
-```
+``` vue
 <x-layout>
     <x-header class="headerDemo">Header</x-header>
     <x-content class="contentDemo">Content</x-content>
@@ -20,7 +20,7 @@
 <layout-demo-2></layout-demo-2>
 
 ### 使用
-```
+``` vue
 <x-layout>
     <x-header class="headerDemo">Header</x-header>
     <x-layout>
@@ -36,7 +36,7 @@
 <layout-demo-3></layout-demo-3>
 
 ### 使用
-```
+``` vue
 <x-layout>
     <x-sider class="siderDemo">Sider</x-sider>
     <x-layout>

@@ -5,7 +5,7 @@
 <button-demo></button-demo>
 
 ### 使用
-```
+``` vue
 import { Button } from 'xx-simple-ui'
 export default {
     components: {
