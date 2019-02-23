@@ -1,8 +1,8 @@
 <template>
     <div class="collapse-item">
-        <div class="title" @click="handleClick">
+        <div class="title" @click="handleClick" :data-name="name">
             <x-icon name="right" ref="icon" v-if="!hideIcon"></x-icon>
-            {{title}} {{single}}
+            {{title}}
         </div>
         <div class="content" v-if="open">
             <slot></slot>
@@ -11,7 +11,8 @@
 </template>
 
 <script>
-    import Icon from '@/components/icon'
+    import Icon from '../../components/icon/icon'
+
     export default {
         name: "xCollapseItem",
         components: {'x-icon': Icon},
@@ -32,16 +33,15 @@
         data() {
             return {
                 open: false,
-                single: false
             }
         },
         inject: ['eventBus'],
         mounted() {
             this.eventBus && this.eventBus.$on('update:selected', (names) => {
-                if(names.indexOf(this.name)>=0) {
+                if (names.indexOf(this.name) >= 0) {
                     this.open = true
                     this.$refs.icon.$el.style.transform = 'rotate(90deg)'
-                }else{
+                } else {
                     this.open = false
                     this.$refs.icon.$el.style.transform = 'rotate(360deg)'
                 }
@@ -49,17 +49,11 @@
         },
         methods: {
             handleClick() {
-                if(this.open) {
+                if (this.open) {
                     this.eventBus && this.eventBus.$emit('update:removeSelected', this.name)
-                }else{
+                } else {
                     this.eventBus && this.eventBus.$emit('update:addSelected', this.name)
                 }
-            },
-            handleClose() {
-                this.open = false
-            },
-            handleOpen() {
-                this.open = true
             }
         }
     }
@@ -68,8 +62,8 @@
 <style scoped lang='scss'>
     $grey: #ddd;
     $border-radius: 4px;
-    .collapse-item{
-        > .title{
+    .collapse-item {
+        > .title {
             border: 1px solid $grey;
             margin-top: -1px;
             margin-left: -1px;
@@ -78,25 +72,29 @@
             display: flex;
             align-items: center;
             padding: 0 8px;
-            > .x-icon{
+
+            > .x-icon {
                 width: .8em;
                 height: .8em;
                 margin-right: .8em;
             }
         }
-        &:first-child{
+
+        &:first-child {
             > .title {
                 border-top-left-radius: $border-radius;
                 border-top-right-radius: $border-radius;
             }
         }
-        &:last-child{
-            > .title:last-child{
+
+        &:last-child {
+            > .title:last-child {
                 border-bottom-left-radius: $border-radius;
                 border-bottom-right-radius: $border-radius;
             }
         }
-        > .content{
+
+        > .content {
             padding: 8px;
         }
 
