@@ -1,13 +1,6 @@
 <template>
     <div id="app">
-        <div style="border: 1px solid black;">
-            <x-row gutter="20">
-                <x-col span="12">
-                    1</x-col>
-                <x-col span="12">1</x-col>
-            </x-row>
-        </div>
-
+        <x-button @click="handleClick">你好</x-button>
     </div>
 </template>
 
