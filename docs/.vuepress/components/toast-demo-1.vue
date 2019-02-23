@@ -4,7 +4,7 @@
 
 <script>
     export default {
-        name: "collapse-demo"
+        name: "toast-demo-1"
     }
 </script>
 

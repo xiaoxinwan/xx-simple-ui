@@ -39,7 +39,7 @@
             },
             position: {
                 type: String,
-                default: 'top',
+                default: 'middle',
                 validate(value) {
                     return ['top', 'bottom', 'middle'].indexOf(value) >= 0
                 }
