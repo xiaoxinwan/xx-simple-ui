@@ -37,7 +37,7 @@ export default {
 ```
 
 ### 文档
-稍后补上
+[请点击查阅](https://xiaoxinwan.github.io/xx-simple-ui/)
 
 
 
